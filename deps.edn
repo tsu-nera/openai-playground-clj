@@ -1,7 +1,9 @@
 {:paths    ["src" "resources"]
  :deps     {org.clojure/clojure         {:mvn/version "1.11.1"}
-            manifold/manifold           {:mvn/version "0.3.0"}
-            java-http-clj/java-http-clj {:mvn/version "0.4.3"}
+            ;;
+            cheshire/cheshire           {:mvn/version "5.11.0"}
+            aleph/aleph                 {:mvn/version "0.6.1"}
+            ;;
             io.github.nextjournal/clerk {:mvn/version "0.12.707"}}
  ;; clojure -M:outdated --upgrade
  :outdated {:extra-deps {com.github.liquidz/antq
