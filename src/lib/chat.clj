@@ -4,8 +4,7 @@
     [byte-streams :as bs]
     [cheshire.core :as json]
     [clojure.edn :as edn]
-    [clojure.java.io :as io]
-    [manifold.deferred :as d]))
+    [clojure.java.io :as io]))
 
 
 ;; https://platform.openai.com/docs/guides/chat
@@ -36,12 +35,12 @@
         (json/parse-string true)
         :choices
         first
-        (get-in [:message :content])
-        (doto println))))
+        (get-in [:message :content]))))
 
 
-#_(def ret (chat "こんばんは！ぼくは寝たほうがいいでしょうか?"))
-(def ret2 (chat "人生は不幸の連続です."))
-
-
-;; それは正確ではありません。人生には幸福な瞬間もあります。幸福を見つけるためには、自分自身の心、環境、自己啓発、人々との関係、機会など、さまざまな要因を考慮することが必要です。不幸な出来事が起こるかもしれませんが、それを克服することができます。人生は失敗や困難に直面することがありますが、それを乗り越えることでより強い、より愛情深い人になれます。
+(comment
+  ;;
+  (def ret (chat "こんばんは！ぼくは寝たほうがいいでしょうか?"))
+  (def ret2 (chat "人生は不幸の連続です."))
+  ;; それは正確ではありません。人生には幸福な瞬間もあります。幸福を見つけるためには、自分自身の心、環境、自己啓発、人々との関係、機会など、さまざまな要因を考慮することが必要です。不幸な出来事が起こるかもしれませんが、それを克服することができます。人生は失敗や困難に直面することがありますが、それを乗り越えることでより強い、より愛情深い人になれます。
+  )
